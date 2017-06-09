@@ -11,3 +11,5 @@ try {
 } catch (PDOException $err) {
     die($err->getMessage());
 }
+
+echo "This is part of the Pipeline Process\n\n";

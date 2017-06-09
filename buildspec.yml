@@ -9,10 +9,11 @@ phases:
             - $(aws ecr get-login --region us-east-1)
     build:
         commands:
-            - echo Building Docker Image
+            - echo Successfully logged in, building docker image
             - docker build -t php-test .
+            - echo Image built, tagging image
             - docker tag php-test:latest 466336452057.dkr.ecr.us-east-1.amazonaws.com/php-test:latest
     post_build:
         commands:
-            - echo Build completed, pushing Image to ECR
+            - echo Image created and tagged, pushing to Container Registry...
             - docker push 466336452057.dkr.ecr.us-east-1.amazonaws.com/php-test:latest
