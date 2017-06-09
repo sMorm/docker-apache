@@ -1,0 +1,16 @@
+version: 0.2
+
+phases:
+    pre_build:
+        commands:
+            - echo Logging into ECR...
+            - $(aws ecr get-login --no-include-email --region us-east-1)
+    build:
+        commands:
+            - echo Building Docker Image
+            - docker build -t php-test .
+            - docker tag php-test:latest 466336452057.dkr.ecr.us-east-1.amazonaws.com/php-test:latest
+    post_build:
+        commands:
+            - echo Build completed, pushing Image to ECR
+            - docker push 466336452057.dkr.ecr.us-east-1.amazonaws.com/php-test:latest
