@@ -12,4 +12,4 @@ try {
     die($err->getMessage());
 }
 
-echo "Pipeline Container 1: Updated Auto build and deploy: test seven.. \n\n";
+echo "Pipeline Container 1: Auto Deployment and Build is working!\n\n";
