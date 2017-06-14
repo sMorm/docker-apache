@@ -58,6 +58,7 @@ try {
 }
 echo "<h3 class='text'>$isConnected</h3>";
 echo "<h3 class='text'>Base Image: Ubuntu 14.04</h3>";
+echo "<h3 class='text'>Server Version: Apache — 2.4.7</h3>";
 ?>
 </div>
 
