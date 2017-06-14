@@ -18,7 +18,7 @@ body {
   display: flex;
   justify-content: center;
   align-content: center;
-  color: #AAA;
+  color: #888;
   width: 50%;
   max-width: 700px;
   margin: 0 auto;
