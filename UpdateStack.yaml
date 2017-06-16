@@ -9,7 +9,7 @@ Parameters:
 
   TargetGroup:
     Type: String
-    Default: arn:aws:elasticloadbalancing:us-east-1:466336452057:targetgroup/lb-target-group/6a4f5f717c0a1d3d
+    Default: arn:aws:elasticloadbalancing:us-east-1:630232151802:targetgroup/ecs-lb-target-group/fde90a6a7b557363
 
   Cluster:
     Type: String
