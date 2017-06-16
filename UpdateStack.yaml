@@ -13,11 +13,11 @@ Parameters:
 
   Cluster:
     Type: String
-    Default: docker-test
+    Default: ifs-support-portal
 
   Repository:
     Type: String
-    Default: php-test
+    Default: ifs-support-portal
 
 
 Resources:
