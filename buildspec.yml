@@ -10,10 +10,10 @@ phases:
     build:
         commands:
             - echo Successfully logged in, building docker image
-            - docker build -t php-test .
+            - docker build -t ifs-support-portal .
             - echo Image built, tagging image
-            - docker tag php-test:latest 466336452057.dkr.ecr.us-east-1.amazonaws.com/php-test:latest
+            - docker tag ifs-support-portal:latest 630232151802.dkr.ecr.us-east-1.amazonaws.com/ifs-support-portal:latest
     post_build:
         commands:
             - echo Image created and tagged, pushing to Container Registry...
-            - docker push 466336452057.dkr.ecr.us-east-1.amazonaws.com/php-test:latest
+            - docker push 630232151802.dkr.ecr.us-east-1.amazonaws.com/ifs-support-portal:latest
