@@ -45,6 +45,20 @@ body {
 <div class="text">
 <?php
 
+$redis = new Redis();
+// $redis->connect('redistest.hulyaa.0001.use1.cache.amazonaws.com', 6379);
+// echo "Redis is running".$redis->ping();
+try {
+  $redis->connect('redistest.hulyaa.0001.use1.cache.amazonaws.com', 6379);
+  echo "Redis Connected";
+} catch (Exception $e) {
+  echo "$e->getMessage()";
+}
+
+$count = $redis->incr('count');
+echo "$count"."hits";
+
+
 $servername = "serey-db.cp3iwujbajvo.us-east-1.rds.amazonaws.com";
 $dbname = "choices";
 $username = "sereydb";
