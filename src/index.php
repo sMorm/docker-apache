@@ -44,33 +44,6 @@ body {
 
 <div class="text">
 <?php
-
-$redis = new Redis();
-// $redis->connect('redistest.hulyaa.0001.use1.cache.amazonaws.com', 6379);
-// echo "Redis is running".$redis->ping();
-try {
-  $redis->connect('redistest.hulyaa.0001.use1.cache.amazonaws.com', 6379);
-  echo "Redis Connected";
-} catch (Exception $e) {
-  echo "$e->getMessage()";
-}
-
-$count = $redis->incr('count');
-echo "$count"."hits";
-
-
-$servername = "serey-db.cp3iwujbajvo.us-east-1.rds.amazonaws.com";
-$dbname = "choices";
-$username = "sereydb";
-$password = "password781";
-$isConnected = "";
-try {
-    $pdo = new PDO("mysql:host=$servername; dbname=$dbname", $username, $password);
-    $isConnected = "Successfully Connected to Database";
-} catch (PDOException $err) {
-    die($err->getMessage());
-}
-echo "<h3 class='text'>$isConnected</h3>";
 echo "<h3 class='text'>Base Image: Ubuntu 14.04</h3>";
 echo "<h3 class='text'>Server Version: Apache - 2.4.7</h3>";
 echo "<h3 class='text'>Changes has been made to the source</h3>";
